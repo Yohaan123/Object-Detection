@@ -19,7 +19,6 @@ function setup() {
 function modelLoaded() {
     console.log("model is loaded");
     status = true;
-    objectDetector.detect(video,gotResult);
 }
 
 function gotResult(error, result) {
@@ -33,7 +32,7 @@ function gotResult(error, result) {
 }
 
 function draw() {
-    image(video, 0, 0, 380, 380);
+    image(video, 0, 0, 380, 450);
     /*fill('red');
     text("dog",130,70);
     noFill();
@@ -54,6 +53,8 @@ function draw() {
         g = random(255);
         b = random(255);
         
+        objectDetector.detect(video,gotResult);
+
         for (i = 0; i < object.length; i++) {
             fill(r,g,b);
             percent = floor(object[i].confidence * 100);
