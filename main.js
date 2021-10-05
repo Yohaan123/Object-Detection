@@ -33,7 +33,7 @@ function gotResult(error, result) {
 }
 
 function draw() {
-    image(img, 0, 0, 640, 450);
+    image(video, 0, 0, 380, 380);
     /*fill('red');
     text("dog",130,70);
     noFill();
